@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- adding link of tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- adding discord logo in title of website -->
+    <link rel="shortcut icon" href="./images/discord-logo.webp" type="image/x-icon">
+
+    <!-- adding link of font awesome website for the use of different logos  -->
+    <script src="https://kit.fontawesome.com/694a00980e.js" crossorigin="anonymous"></script>
+    <title> Discord | Your Place to Talk and Hang Out</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,500;0,700;0,900;1,500;1,600;1,800;1,900&display=swap');
+
+        * {
+            text-decoration: none;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .hover1:hover {
+            box-shadow: 1px 1px 10px black;
+            transition: .6s;
+        }
+
+        li:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width:900px) {
+            .responsive-list {
+                padding-left: 40px;
+                padding-top: 70px;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0.1%;
+                left: 100%;
+                background-color: #ffffff;
+                z-index: 1000;
+            }
+
+            .responsive-list li {
+                font-size: 18px;
+                width: 200px;
+                padding: 8px 16px;
+                border-radius: 8px;
+                background-color: #f6f6f6;
+                color: #00b0f4;
+            }
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'md': '980px',
+                    'lg': '1075px',
+                    'nav-fir': '1200px',
+                    'foot-large': '1280px',
+                    'last': '600px',
+                    'second': '780px',
+                    'nav-second': '900px',
+                    'nav-third': '800px',
+                    'x-lg': '1500px',
+                }
+                ,
+                extend: {
+                    colors: {
+                        primary: '#404EED',
+                        footer: "#23272A",
+                        blue: "#5865f2",
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!-- code for header is start from here  -->
+    <header class="header bg-primary pt-4">
+
+        <nav class="flex items-center w-[95%] nav-fir:w-[80%] mx-auto  justify-between py-4">
+
+            <!-- discord logo  -->
+            <div class="logo text-white text-[25px] flex items-center gap-2">
+                <i class="fa-brands fa-discord f"></i>
+                <h1 class="font-black">Discord</h1>
+            </div>
+
+            <!-- lists of navbar  -->
+            <i class="fas fa-bars fa-2x absolute right-6 text-white top-8 nav-second:hidden cursor-pointer"
+                id="three-line"></i>
+            <ul id="nav-list"
+                class="responsive-list flex flex-col bg-white nav-second:bg-transparent nav-second:flex-row  gap-5 lg:gap-10 text-black nav-second:text-white text-[16px] ">
+
+                <i class="fas fa-x fa-2x fixed right-4 top-8 cross cursor-pointer" id="cross"></i>
+
+                <div class=" text-black text-[25px] flex items-center gap-2 inline nav-third:hidden ">
+
+                    <i class="fa-brands fa-discord f"></i>
+                    Discord
+                    <!-- <h1 class="font-black">Discord</h1> -->
+                </div>
+                <li class=" font-medium cursor-pointer decoration-solid hover:decoration-solid">Download</li>
+                <li class="font-medium cursor-pointer decoration-solid hover:decoration-solid">Nitro</li>
+                <li class="font-medium cursor-pointer decoration-solid hover:decoration-solid">Discover</li>
+                <li class="font-medium cursor-pointer decoration-solid hover:decoration-solid">Safety</li>
+                <li class="font-medium cursor-pointer decoration-solid hover:decoration-solid">Support</li>
+                <li class="font-medium cursor-pointer decoration-solid hover:decoration-solid">Blog</li>
+                <li class="font-medium cursor-pointer decoration-solid hover:decoration-solid">Careers</li>
+
+            </ul>
+
+            <!-- open discard button  -->
+            <button
+                class="mr-16 nav-second:mr-0 hover1 rounded-[20px] bg-white px-4 text-[16px] py-1 hover:text-primary">
+                Open Discord
+            </button>
+        </nav>
+
+        <!-- three images are here  -->
+        <div class="images overflow-hidden">
+            <img src="./images/first-bg-image.svg" alt="">
+            <!-- content in middle  -->
+            <section
+                class="second:pl-8 mx-2 second:px-0 flex flex-col items-center -mt-20 second:-mt-40 md:-mt-56 md:-mt-64">
+                <h1 class="text-[60px] font-black  text-white text-center">IMAGINE A PLACE...</h1>
+                <h1 class="w-[90%] second:w-[60%] text-[20px] text-center text-white">...where you can belong to a
+                    school club, a gaming
+                    group, or a worldwide art community. Where just you and a handful of friends can spend time
+                    together. A
+                    place that makes it easy to talk every day and hang out more often.</h1>
+                <div class=" btn-group flex flex-col second:flex-row mb-0 md:mb-52  gap-10 my-8">
+                    <button class=" w- hover:text-primary bg-white text-black py-3 text-[21px] px-8 rounded-[30px]">
+                        <i class="fa-solid fa-download"></i> Download for Windows</button>
+                    <button class="bg-black text-white py-3 text-[21px] px-8 rounded-[30px] hover:bg-gray-800 hover1">
+                        Open
+                        Discord in your browser </button>
+                </div>
+            </section>
+
+            <!-- two image of header section  -->
+            <div class=" relative flex justify-between mt-40 x-lg:mt-8">
+                <!-- left image  -->
+                <img class="absolute -left-80 x-lg:-left-56 -mt-[354px] hidden md:inline"
+                    src="./images/8a8375ab7908384e1fd6efe408284203 (1).svg" alt="" />
+
+                <!-- right image  -->
+                <img class="md:absolute -mt-20 ml-[20%] md:ml-0  md:-right-40   md:-mt-[360px]"
+                    src="./images/header-second.svg" alt="">
+            </div>
+
+        </div>
+    </header>
+    <!-- code for header is end here  -->
+
+
+
+  
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
